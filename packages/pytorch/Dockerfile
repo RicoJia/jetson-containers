@@ -50,5 +50,8 @@ RUN set -ex \
         scikit-build \
         ninja
    
+RUN set -ex pip3 install --no-cache-dir \
+    tensorboard
+
 # set the torch hub model cache directory to mounted /data volume
 ENV TORCH_HOME=/data/models/torch
